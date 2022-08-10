@@ -1,0 +1,17 @@
+.heading{text-align: center;letter-spacing: 2;}
+
+.btn{
+  background-color: aqua;
+  padding: 20px;
+  margin: 10px;
+}
+.btn1{
+  background-color:blueviolet;
+  padding: 20px;
+  margin: 10px;
+}
+.btn2{
+  background-color:crimson ;
+  padding: 20px;
+  margin: 10px;
+}

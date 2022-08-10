@@ -1,0 +1,34 @@
+import React from "react";
+import Clickcounter from "./components/sumit/renderporps/Clickcounter";
+import HoverCounter from "./components/sumit/renderporps/HoverCounter";
+// import User from "./components/sumit/renderporps/User";
+import Counter from "./components/sumit/renderporps/Counter";
+
+
+export default class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        {/* Type:2 > calling as children*/}
+        <Counter>
+         {(count, incrementCounter,name) => <Clickcounter count={count} incrementCounter={incrementCounter} />}
+        </Counter>
+      
+        {
+        // Type:1 > calling as param
+        /* <Counter 
+        render={(count,incrementCounter)=> <Clickcounter  count={count} incrementCounter={incrementCounter}/> }
+      /> */}
+        {/* <Counter
+          render={(count, incrementCounter, name) => <HoverCounter count={count} incrementCounter={incrementCounter} name={name} />}
+        /> */}
+
+        {/* <User name={(isLoggedIn)=> (isLoggedIn ? 'Kamrul':'Guest')}/> */}
+        {/* <User name = {()=> "kamrul"}/>  sending arrow fn , calling there(), returning sumit */}
+        {/* <User name="kamrul"/> // sending string*/}
+      </div>
+    )
+    // return <Emoji > {({ addEmoji }) => <Text addEmoji={addEmoji} />}</Emoji>
+  }
+}

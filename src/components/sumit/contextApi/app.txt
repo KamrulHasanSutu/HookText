@@ -1,0 +1,66 @@
+import React from "react";
+import Clickcounter from "./components/sumit/contextApi/Clickcounter";
+import HoverCounter from "./components/sumit/contextApi/HoverCounter";
+import Counter from "./components/sumit/contextApi/Counter";
+import Section from "./components/sumit/contextApi/Section";
+import ThemeContext from "./context/themeContext";
+
+// import User from "./components/sumit/renderporps/User";
+// import Counter from "./components/sumit/renderporps/Counter";
+
+
+export default class App extends React.Component {
+  state = {
+    theme: 'darkk'
+  }
+  // switchTheme = ()=> {
+  //   this.setState({
+  //     theme:!this.state.theme
+  //   })
+  // }
+  switchTheme = ()=> {
+    this.setState(({theme})=> {
+      if(theme === 'darkk'){
+        return {
+          theme:'light'
+        }
+      }
+      else{
+        return {
+          theme:'darkk'
+        }
+      }
+     })
+  }
+
+  render() {
+    const { theme } = this.state;
+    return (
+      <div>
+        {/* Type:2 > calling as children*/}
+        <Counter>
+          {(count, incrementCounter) => <Clickcounter count={count} incrementCounter={incrementCounter} />}
+        </Counter>
+        {/* Type:2 > context api*/}
+        <ThemeContext.Provider value={{ theme, switchTheme:this.switchTheme }}>
+          <Section />
+        </ThemeContext.Provider>
+
+
+        {
+        // Type:1 > calling as param
+        /* <Counter 
+        render={(count,incrementCounter)=> <Clickcounter  count={count} incrementCounter={incrementCounter}/> }
+      /> */}
+        {/* <Counter
+          render={(count, incrementCounter, name) => <HoverCounter count={count} incrementCounter={incrementCounter} name={name} />}
+        /> */}
+
+        {/* <User name={(isLoggedIn)=> (isLoggedIn ? 'Kamrul':'Guest')}/> */}
+        {/* <User name = {()=> "kamrul"}/>  sending arrow fn , calling there(), returning sumit */}
+        {/* <User name="kamrul"/> // sending string*/}
+      </div>
+    )
+    // return <Emoji > {({ addEmoji }) => <Text addEmoji={addEmoji} />}</Emoji>
+  }
+}

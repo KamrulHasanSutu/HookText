@@ -1,0 +1,15 @@
+.container{
+    background-color: #999;
+    text-align: center;
+    letter-spacing: 2px;
+    height: 400px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.container h2{
+    color: #fff ;
+    border-bottom: 2px dotted;
+}
