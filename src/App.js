@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ComplexCounter from "./components/sumit/Hook/UseReduce/ComplexCounter";
+import GetPost from "./components/sumit/Hook/UseReduce/GetPost";
 
 
 
@@ -10,7 +10,7 @@ export default function App() {
     return (
      <div>
       
-      <ComplexCounter />
+      <GetPost />
 
         {/* <h2>We shall leaarn useeffect today</h2>
         <hr></hr>
