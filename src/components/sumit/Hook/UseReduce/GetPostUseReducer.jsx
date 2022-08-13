@@ -25,7 +25,6 @@ const reducer = (state, action) => {
             return state
     }
 }
-
 export default function GetPostUseReducer() {
 
     const [state, action] = useReducer(reducer, initValues)

@@ -1,25 +1,41 @@
-import React, { useState } from "react";
-import GetPost from "./components/sumit/Hook/UseReduce/GetPost";
-
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./rRouterDom/Home";
+import About from "./rRouterDom/About";
+import Services from "./rRouterDom/Services";
+import Error from "./rRouterDom/Error";
 
 
 export default function App() {
-//   const [show,setShow] = useState(true)
+  //   const [show,setShow] = useState(true)
 
 
-    return (
-     <div>
+  return (
+
+
+    <div>
+      <BrowserRouter>
+      <nav>our navbar</nav>
+        <Routes>
+          <Route path="/"  element={<Home />}/>
+          <Route path="about"  element={<About />}/>
+          <Route path="services"  element={<Services />}/>
+          <Route path="products"  element={<h2>Hi there</h2>}/>
+          <Route path="*"  element={<Error />}/>
+        </Routes>
+        <footer>our footer</footer>
+      </BrowserRouter>
+   
       
-      <GetPost />
+    
 
-        {/* <h2>We shall leaarn useeffect today</h2>
-        <hr></hr>
-        <div>{show && <TestUseEffectComp />}</div>
-
-        <button type="button" onClick={()=> setShow((prev)=> !prev)}>{show ? 'hide' : 'show'}</button> */}
-     </div>
-    )
+    </div>
 
 
-  }
+
+
+  )
+
+
+}
 
