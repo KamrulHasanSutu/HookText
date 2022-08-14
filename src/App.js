@@ -11,17 +11,18 @@ export default function App() {
 
 
   return (
-
+    // keep seeing all the time homepage
 
     <div>
       <BrowserRouter>
       <nav>our navbar</nav>
         <Routes>
-          <Route path="/"  element={<Home />}/>
-          <Route path="about"  element={<About />}/>
-          <Route path="services"  element={<Services />}/>
-          <Route path="products"  element={<h2>Hi there</h2>}/>
-          <Route path="*"  element={<Error />}/>
+          <Route path="/"  element={<Home />}>
+            <Route path="about"  element={<About />}/>
+            <Route path="services"  element={<Services />}/>
+            <Route path="products"  element={<h2>products page</h2>}/>
+            <Route path="*"  element={<Error />}/>
+          </Route>
         </Routes>
         <footer>our footer</footer>
       </BrowserRouter>
