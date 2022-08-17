@@ -9,6 +9,7 @@ export default function StyledNavbar() {
           <NavLink to='/about' className={({isActive})=> (isActive ? ' active': 'link')}>AboutMenu</NavLink>
           <NavLink to='/products' className={({isActive})=> (isActive? ' active': 'link')}>ProductsMenu</NavLink>
           <NavLink to='/services' className={({isActive})=>(isActive ? ' active': 'link') }>ServicesMenu</NavLink>
+          <NavLink to='/login' className={({isActive})=>(isActive ? ' active': 'link') }>Login</NavLink>
         </nav>
       </h2></div>
   )

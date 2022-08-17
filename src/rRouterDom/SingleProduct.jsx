@@ -16,5 +16,4 @@ import { Link, useParams } from 'react-router-dom';
     </div>
   )
 }
-
 export default SingleProduct;
