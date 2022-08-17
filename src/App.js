@@ -3,40 +3,32 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./rRouterDom/Home";
 import About from "./rRouterDom/About";
 import Services from "./rRouterDom/Services";
+import Products  from "./rRouterDom/Products";
 import Error from "./rRouterDom/Error";
-
+import SharedLayout from "./rRouterDom/SharedLayout";
+import SingleProduct from "./rRouterDom/SingleProduct";
 
 export default function App() {
   //   const [show,setShow] = useState(true)
-
-
   return (
     // keep seeing all the time homepage
 
     <div>
       <BrowserRouter>
-      <nav>our navbar</nav>
+      <nav>navbar-bar</nav>
         <Routes>
-          <Route path="/"  element={<Home />}>
+          <Route path="/"  element={<SharedLayout />}>
+            <Route index element={<Home />}/>
             <Route path="about"  element={<About />}/>
             <Route path="services"  element={<Services />}/>
-            <Route path="products"  element={<h2>products page</h2>}/>
+            <Route path="products"  element={<Products/>}/>
+            <Route path="products/:productId"  element={<SingleProduct/>}/>
             <Route path="*"  element={<Error />}/>
           </Route>
         </Routes>
-        <footer>our footer</footer>
+        <footer >footer</footer>
       </BrowserRouter>
    
-      
-    
-
     </div>
-
-
-
-
   )
-
-
 }
-

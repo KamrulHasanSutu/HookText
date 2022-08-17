@@ -16,3 +16,17 @@ code {
   margin-right: 10px;
   margin-left: 10px;
 }
+.navbar {
+  width: 90vw;
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+
+}
+.active {
+  color: rgb(83, 27, 90);
+}
+.link{
+  color: gray;
+}
+
